@@ -1,0 +1,68 @@
+// frame_sun
+.sun.frame {
+  &-banner {
+    &__list {
+      &-item {
+        &:nth-child(1) {
+          background: url(../images/banner-3.png);
+          @include bg-img;
+        }
+        &:nth-child(2) {
+          background: url(../images/product-2-color.png);
+          @include bg-img;
+        }
+      }
+    }
+  }
+  &-list {
+    &__list {
+      &-item {
+        width: calc((100% - 60px) / 3);
+        &:nth-child(n + 7) {
+          display: none;
+        }
+      }
+    }
+    .page-controller {
+      display: none;
+    }
+  }
+}
+
+@include pad {
+  .sun.frame {
+    &-list {
+      &__list {
+        &-item {
+          width: calc((100% - 30px) / 2);
+          &:nth-child(n + 7) {
+            display: initial;
+          }
+        }
+      }
+      .page-controller {
+        display: flex;
+      }
+    }
+  }
+}
+@include mobile {
+  .sun.frame {
+    &-list {
+      &__list {
+        &-item {
+          width: 100%;
+          margin-bottom: 32px;
+          &-inner {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

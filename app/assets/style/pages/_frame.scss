@@ -1,0 +1,239 @@
+// frame
+.frame {
+  &-nav {
+    .container {
+      max-width: 1380px;
+    }
+    &__list {
+      border: 1px solid $borderLightGray;
+      &-item {
+        width: 462px;
+        &:nth-child(-n + 2) {
+          border-right: 1px solid $borderLightGray;
+        }
+        a {
+          color: #000;
+          border-bottom: 15px solid transparent;
+        }
+        &:hover a {
+          border-bottom: 15px solid $primary;
+        }
+        a.active {
+          border-bottom: 15px solid $primary;
+        }
+      }
+    }
+  }
+  &-banner {
+    &__list {
+      &-item {
+        height: 309px;
+        &:nth-child(1) {
+          background: url(../images/banner-1.png);
+          @include bg-img;
+          width: 100%;
+        }
+        &:nth-child(2) {
+          background: url(../images/banner-2.png);
+          @include bg-img;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-list {
+    &__list {
+      &-item {
+        width: calc((100% - 90px) / 4);
+      }
+    }
+    &__color-cube {
+      position: relative;
+      height: 24px;
+      &::before,
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        background-color: #5f3e2d;
+        border-radius: 4px;
+      }
+      &::after {
+        background-color: #b75929;
+        margin-left: 32px;
+      }
+    }
+  }
+}
+.page-controller {
+  li {
+    border-right: 1px solid #555555;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+    &:first-child {
+      border-left: 1px solid #555555;
+    }
+    &:last-child {
+      background-color: #f2f2f2;
+    }
+    &:hover {
+      background-color: #000000;
+    }
+    &:hover a {
+      color: white;
+    }
+  }
+  a {
+    color: #555555;
+  }
+}
+@include pad {
+  .frame {
+    &-nav {
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+      &__list {
+        &-item {
+          a {
+            padding: 16px 0;
+            img {
+              width: 32px;
+              height: 32px;
+            }
+            h4 {
+              font-size: 28px;
+              line-height: 42px;
+            }
+          }
+          &:hover a {
+            border-bottom: 8px solid $primary;
+          }
+        }
+      }
+    }
+    &-banner {
+      &__list {
+        &-item {
+          &:nth-child(2) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    &-list {
+      padding: 40px 0 104px;
+      h3 {
+        font-size: 32px;
+        line-height: 48px;
+      }
+      h4 {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 32px;
+      }
+      &__list {
+        max-width: 690px;
+        margin: auto;
+        margin-bottom: 100px;
+        &-item {
+          width: calc((100% - 30px) / 2);
+          margin: 0;
+          &:nth-child(even) {
+            margin-left: 30px;
+            margin-bottom: 72px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          img {
+            width: 100%;
+          }
+          &-inner {
+            p {
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  .frame {
+    &-nav {
+      &__list {
+        &-item {
+          a {
+            padding: 8px 0;
+            img {
+              width: 15px;
+              height: 15px;
+            }
+            h4 {
+              font-size: 14px;
+              line-height: 19px;
+              margin-left: 5px;
+            }
+          }
+          &:hover a {
+            border-bottom: 4px solid $primary;
+          }
+        }
+      }
+    }
+    &-banner {
+      &__list {
+        &-item {
+          height: 144px;
+        }
+      }
+    }
+    &-list {
+      padding: 30px 0 30px;
+      h3 {
+        font-size: 20px;
+        line-height: 26px;
+      }
+      h4 {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
+      &__list {
+        max-width: 345px;
+        margin: 0 auto;
+        &-item {
+          width: 100%;
+          &:nth-child(even) {
+            margin-left: 0;
+            margin-bottom: 0;
+          }
+          &:nth-child(n + 4) {
+            display: none;
+          }
+          &:nth-child(-n + 3) {
+            margin-bottom: 32px;
+          }
+          &-inner {
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .page-controller {
+    li {
+      a {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 8px;
+      }
+    }
+  }
+}

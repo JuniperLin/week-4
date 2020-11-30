@@ -1,0 +1,57 @@
+---
+title: 門市據點 - 地圖
+layout: ./app/layout.ejs
+engine: ejs
+current: stores_map
+---
+
+<!-- STORES BANNER -->
+<section class="secondary-banner">
+    <div class="container d-flex aife">
+        <h2 class="fz-64 lh-90 d-flex aic">門市據點<img class="ml-24" src="./assets/images/icon-location.svg"></h2>
+    </div>
+</section>
+
+<!-- STORES LOCATION -->
+<main class="map stores-location pt-16 pb-304">
+    <div class="container">
+        <form class="stores-location__selector d-flex aic mb-32">
+            <label for="stores" class="fz-24 lh-30">選擇分店</label>
+            <select id="stores" class="ml-20 fz-18 pt-10 pb-10 pl-19">
+                <option value="台北中山旗艦店" selected>台北中山旗艦店</option>
+                <option value="桃園中山旗艦店">桃園中山旗艦店</option>
+                <option value="新竹中山旗艦店">新竹中山旗艦店</option>
+                <option value="台中中山旗艦店">台中中山旗艦店</option>
+                <option value="台南中山旗艦店">台南中山旗艦店</option>
+                <option value="高雄中山旗艦店">高雄中山旗艦店</option>
+            </select>
+        </form>
+        <ul class="map stores-location__list d-flex">
+            <li class="map stores-location__list-item">
+                <div class="map stores-location__list-item-img">
+                    <img src="./assets/images/locate1.jpeg">
+                </div>
+                <div class="map store-info">
+                    <h2 class="store-info__name fw-regular fz-24 lh-36 d-flex aic pl-24">台北中山旗艦店</h2>
+                    <ul class="store-info__content py-16 pl-24 pr-24">
+                        <li class="d-flex aic mb-8">
+                            <img src="./assets/images/icon-phone-black.svg">
+                            <p class="fz-20 lh-30 ml-12">電話：(02)000-1234</p>
+                        </li>
+                        <li class="d-flex aic mb-8">
+                            <img src="./assets/images/icon-clock-black.svg">
+                            <p class="fz-20 lh-30 ml-12">營業時間：10:00-21:00</p>
+                        </li>
+                        <li class="store-info__content-address d-flex">
+                            <img src="./assets/images/icon-map.svg">
+                            <p class="fz-20 lh-30 ml-12">地址：台北市中山區南京東路25巷2-1號</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="map stores-location__list-item-map ml-30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.46394813176!2d121.5357039149881!3d25.052259643713256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abdf92334fbd%3A0xc3ee11a3a99323b!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuInmrrUyNS0y6Jmf!5e0!3m2!1szh-TW!2stw!4v1606716953439!5m2!1szh-TW!2stw" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </li>
+        </ul>
+    </div>
+</main>

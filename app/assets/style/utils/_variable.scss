@@ -1,0 +1,58 @@
+// color
+$primary: #aa0601;
+$secondary: #650300;
+$bg-pink: #aa06010d;
+$lightDark: #212529;
+$lightgray: #707070;
+$borderlight: #dee2e6;
+$borderLightGray: #dcdcdc;
+
+// responsive breakpoint
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// background-image
+@mixin bg-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//sapcing & font-size
+// $max: 304;
+// $offset: 1;
+// $unit: "px";
+
+// @mixin list-loop($className, $styleName) {
+//   $i: 0;
+//   @while $i <= $max {
+//     #{$className + $i} {
+//       #{$styleName}: #{$i + $unit};
+//     }
+//     $i: $i + $offset;
+//   }
+// }
+// // margin
+// @include list-loop(".mt-", "margin-top");
+// @include list-loop(".mb-", "margin-bottom");
+// @include list-loop(".ml-", "margin-left");
+// @include list-loop(".mr-", "margin-right");
+// @include list-loop(".m-", "margin");
+// // padding
+// @include list-loop(".pt-", "padding-top");
+// @include list-loop(".pb-", "padding-bottom");
+// @include list-loop(".pl-", "padding-left");
+// @include list-loop(".pr-", "padding-right");
+// @include list-loop(".p-", "padding");
+// // font-size
+// @include list-loop(".fz-", "font-size");
+// // line-height
+// @include list-loop((".lh-"), "line-height");
